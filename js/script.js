@@ -34,4 +34,51 @@ $( document ).ready(function() {
 
     //FIN DATE PICKER//
 
+    //VALIDATION FORMULAIRE//
+
+   
+    //VERFICATION MAIL//
+
+    $('input#email').blur(function(){
+
+        var regexMail = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+        var inputMail = $('input#email').val();
+
+        if(regexMail.test(inputMail)){
+            $(this).css('border', '2px solid blue');
+            $(this).siblings('.error-mail').slideUp('fast');
+        }
+
+        else{
+            $(this).css('border', '2px solid red');
+            $(this).siblings('.error-mail').slideDown('fast');
+        }
+
+    });
+
+    //FIN VERFICATION MAIL//
+
+    //VERFICATION PASSWORD//
+
+    $('input#password').keyup(function(){
+
+        var regexPassword = /^((?=.*\d)(?=.*[a-z])(?=.*[@#_&^*£§,;./:!"'|\(\)\\?+\=\-\_$%]).{8,})$/;
+
+        var inputPassword = $('input#password').val();
+
+        if(regexPassword.test(inputPassword)){
+            $(this).css('border','2px solid blue');
+            $(this).siblings('.error-password').slideUp('fast');
+        }
+
+        else{
+            $(this).css('border','2px solid red');
+            $(this).siblings('.error-password').slideDown('fast');
+        }
+    });
+
+    //FIN VERFICATION PASSWORD//
+
+
 });
