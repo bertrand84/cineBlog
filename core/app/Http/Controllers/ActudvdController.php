@@ -52,7 +52,7 @@ class ActudvdController extends Controller
 
 
                 $recactudvd -> save();
-                Session::flash('success',"votre dvd a bien été enregistré");
+                session()->flash('success','votre dvd a bien été enregistré');
                 return redirect('actudvd/index');
             }
 
@@ -98,7 +98,7 @@ class ActudvdController extends Controller
 
 
                 $actudvd->save();
-                Session::flash('success', "voter film a bien été enregistré");
+                session()->flash('success', 'votre film a bien été enregistré');
                 return redirect('actudvd/index');
             }
 
@@ -111,7 +111,7 @@ class ActudvdController extends Controller
         $actudvd = actudvd::find($id);
 
         if($actudvd){
-            session::flash ('sucess', 'Le film a bien ete supprime');
+            session()->flash('success', 'Le film a bien ete supprime');
             $actudvd -> delete();
         }
 
