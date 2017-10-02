@@ -609,7 +609,7 @@ h3 {
 }
 
 
-.panel-register, .panel-log {
+.panel-register, .panel-log, .panel-reset {
     background-color: black;
     border: 1px solid white;
     border-radius: 19px;
@@ -642,7 +642,6 @@ h3 {
     margin-top: 0.9rem;
     opacity: 0.8;
     border: 4px solid black;
-    margin-left: -4rem;
     font-family: Helvetica;
 }
 
@@ -727,25 +726,26 @@ h3 {
     color: white;
     -webkit-text-stroke: red 1px;
 }
+
+.error-toggle {
+    display: none;
+    color: red;
+    background: rgba(0,0,0,0.5);
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+}
+
+/*FIN FORMULAIRE REGISTER + LOGIN*/
+
 /*********************************************************************/
 
 /*GESTION FORM RESET, EMAIL*/
 
-.panel-reset {
-    margin: 0 auto;
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 19px;
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    width: 77%;
-    padding-bottom: 2rem;
+.panel-reset{
+    padding: 1rem;
 }
 
-
 .panel-head-reset {
-    width: 100%;
-    border-radius: 19px;
     background: #ff0000;
     background-image: -webkit-linear-gradient(top, #ff0000, #eeff00);
     background-image: -moz-linear-gradient(top, #ff0000, #eeff00);
@@ -753,8 +753,11 @@ h3 {
     background-image: -o-linear-gradient(top, #ff0000, #eeff00);
     background-image: linear-gradient(to bottom, #ff0000, #eeff00);
     font-family: "WaltographUI";
-    font-size: 23px;
     text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 19px;
+    font-size: 3rem;
 }
 
 
@@ -781,6 +784,7 @@ h3 {
 }
 
 .formReset {
+    margin-top: 0.9rem;
     opacity: 0.8;
     border: 4px solid black;
     width: 100%;
