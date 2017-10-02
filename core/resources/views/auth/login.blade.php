@@ -15,6 +15,7 @@
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="formLog" name="email" value="{{ old('email') }}" required autofocus>
+                                <p class="error-mail error-toggle">Veuillez entrer un mail valide.</p>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -29,6 +30,8 @@
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="formLog" name="password" required>
+                                <p class="error-password error-toggle">Le mot de passe doit contenir au moins 1 lettre, 1 chiffre et un caractère spécial (#_&^*£§,;./:!"'|()\?+=-$%) 
+                                et faire au moins 8 caractères.</p>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -56,12 +59,12 @@
                         <div class="form-group">
                             <div class="col-md-12">
                                 <div class="log">
-                                    <button type="submit" class="btn btn-primary, bouton">
+                                    <button type="submit" class="btn btn-primary bouton btn-login">
                                         Connectez-vous                                   </button>
                                 </div>
 
                                 <div class="reset-password">
-                                    <a id="pass" class="btn btn-link, bouton" href="{{ url('/password/reset') }}">
+                                    <a id="pass" class="btn btn-link bouton" href="{{ url('/password/reset') }}">
                                         Mot de passe oublie ?
                                     </a>
                                 </div>
