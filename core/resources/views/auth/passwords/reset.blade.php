@@ -4,9 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel-head-reset">
-                <div class="panel-reset">Reset Password</div>
-
+            <div class="panel-reset">
+                <div class="panel-head-reset">Reset Password</div>
                 <div class="panel-bodyReset">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -53,7 +52,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="formc2" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="formReset" name="password_confirmation" required>
 
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
